@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(15, 24, 24);
+  color: teal;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+p {
+  color: white;
+}
+
+footer {
+  margin-top: 50%;
+}
