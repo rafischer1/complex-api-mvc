@@ -2,7 +2,8 @@
 const model = require('../models/costumes_tags')
 
 const getTagsForCostume = (req, res, next) => {
-  return model.getTagsForCostume(req.params.id)
+  let id = req.params.costume_id
+  return model.getTagsForCostume(id )
     .then((data) => {
       res.status(200).json(data)
     })

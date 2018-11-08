@@ -3,20 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
   //end of dom content scope
 })
 
-
-
 function getCostumes() {
   let parent = document.getElementById('parent')
   let costumesDiv = document.createElement('div')
+  costumesDiv.className = "costumes"
+
   axios.get('/costumes')
     .then((res) => {
-      // handle success
-      console.log('in the get route:', res.data)
       res.data.forEach((costumes) => {
-        // var tagCostumeId = costumes.id
+        let eachCostume = document.createElement('div')
+        eachCostume.className = "eachCostume"
+        let costumeId = costumes.id
         parent.appendChild(costumesDiv)
-        console.log(costumes)
-        costumesDiv.innerText += `\n ${costumes.name} ($${costumes.price}) \n\t ${costumes.description}\n`
+        costumesDiv.appendChild(eachCostume)
+        eachCostume.innerText += `\n ${costumes.name} ($${costumes.price}) \n\t ${costumes.description}\n`
+
+        axios.get(`costumes_tags/${costumeId}`)
+          .then((color) => {
+            console.log(color)
+            let colorTag = document.createElement('div')
+            colorTag.className = "colorTag"
+            eachCostume.appendChild(colorTag)
+            colorTag.style.backgroundColor = `#${color.data.split('#')[1]}`
+          })
+
       })
     })
 }

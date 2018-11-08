@@ -1,5 +1,6 @@
 // Model
 const knex = require('../../knex')
+const tagsModel = require('../models/tags')
 
 const getAll = (req, res, next) => {
   return knex('costumes_tags')
@@ -10,11 +11,16 @@ const getAll = (req, res, next) => {
     .catch(err => Promise.reject(err))
 }
 
-const getTagsForCostume = (costume_id) => {
+const getTagsForCostume = (id) => {
   return knex('costumes_tags')
-    .where('id', costume_id)
-    .then(tag => {
-      return tag[0]
+    .select('tag_id')
+    .where('costume_id', id)
+    .then(tag_id => {    
+      return knex('tags')
+        .where('id', tag_id[0].tag_id)
+        .then(tag => {
+          return tag[0].color
+        })
     })
     .catch(err => Promise.reject(err))
 }

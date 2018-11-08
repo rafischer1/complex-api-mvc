@@ -7,7 +7,9 @@ body {
 }
 
 header {
+  border: 5px dashed rgb(224, 223, 113);
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 10px;
 }
 
 p {
@@ -16,4 +18,58 @@ p {
 
 footer {
   margin-top: 50%;
+}
+
+.colorTag {
+  width: 15%;
+  height: 5%;
+  border: 2px solid rgba(#bebebe, 0.4);
+  border-radius: 10px;
+}
+
+.costumes {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: .5%;
+}
+
+.eachCostume {
+  border: 2px solid rgb(224, 223, 113);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2.5%;
+}
+
+.tagExplanation {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5%;
+  margin-top: 5%;
+}
+
+.colorTagExample {
+  width: 15%;
+  height: 5%;
+  border: 2px solid rgba(#bebebe, 0.4);
+  border-radius: 10px;
+}
+
+.nameTag {
+  margin-top: -15px;
+  text-align: left;
+}
+
+#bargain {
+  background-color: #4244d6;
+}
+#normal { 
+  background-color: #33a7a0;
+}
+#sale {
+  background-color: #dfde61;
+}
+#exclusive {
+   background-color: #ae57de;
 }
