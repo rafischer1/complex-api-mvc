@@ -16,6 +16,28 @@ p {
   color: white;
 }
 
+button {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  border: 2px solid rgba(#bebebe, 0.4);
+  border-radius: 12px;
+  background-color: #4244d6;
+  color: rgb(224, 223, 113);
+  
+}
+
+hr {
+  background-color: rgb(224, 223, 113);
+  height: 2%;
+  border-radius: 10px;
+}
+
+button:active {
+  color: rgb(224, 223, 113);
+  border: 2px solid hsla(0, 46%, 60%, 0.4);
+  background-color: hsla(239, 64%, 54%, 0.4);
+  margin-left: 1px;
+}
+
 footer {
   margin-top: 50%;
 }
@@ -41,6 +63,8 @@ footer {
   margin: 2.5%;
 }
 
+
+/* tags */
 .tagExplanation {
   width: 100%;
   border: 2px solid white;
@@ -72,4 +96,24 @@ footer {
 }
 #exclusive {
    background-color: #ae57de;
+}
+
+/* modals */
+.createForm {
+  color: #4244d6;
+  margin-bottom: 2px;
+  width: 100%;
+  border: 2px solid rgb(224, 223, 113);
+  padding: 10px;  
+}
+
+.editOpenBtn {
+  height: 8%;
+  margin-left: 85%;
+  margin-bottom: 5px;
+}
+
+.editOpenBtn:active {
+  height: 8%;
+  margin-left: 87%;
 }

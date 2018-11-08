@@ -32,4 +32,4 @@ Color: (String) A color to be associated with the tag. Must be a valid hex color
 # Build RESTful routes so that you can:
 
 Create, Read, Update, and Delete costumes
-Create, Read, Update, and Delete tags through costumes
+Create, Read, and Update tags through costumes

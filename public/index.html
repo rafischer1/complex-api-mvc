@@ -56,6 +56,100 @@
           id="bargain">
           <p class="nameTag">Lowest Price Guaranteed</p>
         </p>
+        <hr>
+        <button data-toggle="modal"
+          data-target="#modalCreate">Add Costume</button>
+        <button data-toggle="modal"
+          data-target="
+        #modalEdit">Add Tags</button>
+      </div>
+
+      <!-- create modal -->
+      <div class="modal"
+        id="modalCreate"
+        tabindex="-1"
+        role="dialog">
+        <div class="modal-dialog"
+          role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">List a New Costume</h5>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="createSubmit">
+                <input type="text"
+                  class="createForm"
+                  placeholder="Costume Name"
+                  required>
+                <br>
+                <input type="number"
+                  class="createForm"
+                  placeholder="Costume Price"
+                  required><br>
+                <input type="textbox"
+                  class="createForm"
+                  placeholder="Decription"
+                  required>
+                <br>
+                <button type="button"
+                  class="btn btn-primary">Submit</button>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+
+              <button type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- edit modal -->
+      <div class="modal"
+        id="modalEdit"
+        tabindex="-1"
+        role="dialog">
+        <div class="modal-dialog"
+          role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit title</h5>
+
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="editSubmit">
+                <input type="text"
+                  class="createForm"
+                  placeholder="Costume Name"
+                  required>
+                <br>
+                <input type="number"
+                  class="createForm"
+                  placeholder="Costume Price"
+                  required><br>
+                <input type="textbox"
+                  class="createForm"
+                  placeholder="Decription"
+                  required>
+                <br>
+                <button type="button"
+                  class="btn btn-primary">Submit</button>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button"
+                class="btn btn-primary">Save changes</button>
+              <button type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- footer -->
@@ -72,6 +166,7 @@
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="./javascripts/script.js"></script>
+    <script src="./javascripts/create.js"></script>
   </body>
 
 </html>

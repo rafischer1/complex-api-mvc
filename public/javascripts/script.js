@@ -12,6 +12,9 @@ function getCostumes() {
     .then((res) => {
       res.data.forEach((costumes) => {
         let eachCostume = document.createElement('div')
+        let editBtn = document.createElement('button')
+        editBtn.className = "editOpenBtn"
+        editBtn.innerText = "Edit"
         eachCostume.className = "eachCostume"
         let costumeId = costumes.id
         parent.appendChild(costumesDiv)
@@ -20,10 +23,11 @@ function getCostumes() {
 
         axios.get(`costumes_tags/${costumeId}`)
           .then((color) => {
-            console.log(color)
+            // console.log(color)
             let colorTag = document.createElement('div')
             colorTag.className = "colorTag"
             eachCostume.appendChild(colorTag)
+            eachCostume.appendChild(editBtn)
             colorTag.style.backgroundColor = `#${color.data.split('#')[1]}`
           })
 
