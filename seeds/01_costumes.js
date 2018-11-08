@@ -44,7 +44,7 @@ exports.seed = (knex, Promise) => {
             description: "The exceedingly lank schoolmaster. Oooh Ichy - you poor fool. Get spirited away by the Headless Horseman this holiday."
           },
           {
-            id: 7,
+            id: 8,
             name: "Black Panther",
             price: 17.25,
             description: "The most popular costume this year. Superheroes are always rewarded with lots of candy! Wakanda forever."
