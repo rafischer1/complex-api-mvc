@@ -1,8 +1,16 @@
 # complex-api-mvc
 
 # Costume Shop
-Build an API that represents products in a costume shop! You will have three resources:
+Build an API that represents products in a costume shop! 
 
+installation
+-------------
+npm install
+npm start to run local server
+npm test to run nodemon for route testing
+
+
+___________________________________
 # Costumes
 ID: (You Choose) A unique id that represents the costume. Created automatically.
 Name: (String) Name of the costume. Required.
