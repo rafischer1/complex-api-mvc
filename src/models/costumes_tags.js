@@ -5,7 +5,6 @@ const tagsModel = require('../models/tags')
 const getAll = (req, res, next) => {
   return knex('costumes_tags')
     .then(costumes_tags => {
-      // console.log('model costumes_tags:', costumes_tags)
       return costumes_tags
     })
     .catch(err => Promise.reject(err))
@@ -13,7 +12,6 @@ const getAll = (req, res, next) => {
 
 const getTagsForCostume = (id) => {
   return knex('costumes_tags')
-    .select('tag_id')
     .where('costume_id', id)
     .then(tag_id => {    
       return knex('tags')

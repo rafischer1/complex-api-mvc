@@ -40,14 +40,15 @@ function getCostumes() {
           editOne(costumes.id)
         })
 
+        ///////tags\\\\\\\\\
+        let colorTag = document.createElement('div')
+        colorTag.className = "colorTag"
+        eachCostume.appendChild(colorTag)
+        eachCostume.appendChild(editBtn)
+        eachCostume.appendChild(delBtn)
+
         axios.get(`costumes_tags/${costumes.id}`)
           .then((color) => {
-            // console.log(color)
-            let colorTag = document.createElement('div')
-            colorTag.className = "colorTag"
-            eachCostume.appendChild(colorTag)
-            eachCostume.appendChild(editBtn)
-            eachCostume.appendChild(delBtn)
             colorTag.style.backgroundColor = `#${color.data.split('#')[1]}`
           })
 
@@ -124,15 +125,15 @@ function editOne(costume_id) {
 
         //tags
         let tagUpdateData = {}
-        if (formElements[3].value) {
+        if(formElements[3].value) {
           tagUpdateData.tag_id =
             formElements[3].value
-            tagUpdateData.costume_id = costume_id
+          tagUpdateData.costume_id = costume_id
         }
         console.log(tagUpdateData)
         axios.post('/costumes_tags', tagUpdateData)
           .then((tag) => {
-            if (tag) {
+            if(tag) {
               console.log('tag worked')
             }
           })

@@ -5,6 +5,7 @@ const getTagsForCostume = (req, res, next) => {
   let id = req.params.costume_id
   return model.getTagsForCostume(id )
     .then((data) => {
+      console.log('ctrl data: ', data)
       res.status(200).json(data)
     })
 }
