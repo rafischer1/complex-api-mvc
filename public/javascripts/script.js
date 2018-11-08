@@ -123,10 +123,19 @@ function editOne(costume_id) {
           })
 
         //tags
-        // if (formElements[3].value) {
-        //   editData.description =
-        //     formElements[3].value
-        // }
+        let tagUpdateData = {}
+        if (formElements[3].value) {
+          tagUpdateData.tag_id =
+            formElements[3].value
+            tagUpdateData.costume_id = costume_id
+        }
+        console.log(tagUpdateData)
+        axios.post('/costumes_tags', tagUpdateData)
+          .then((tag) => {
+            if (tag) {
+              console.log('tag worked')
+            }
+          })
       })
     })
 }

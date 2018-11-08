@@ -30,4 +30,6 @@ const getAll = (req, res, next) => {
     })
 }
 
-module.exports = { getTagsForCostume , create, getAll }
+
+
+module.exports = { getTagsForCostume , create, getAll}
