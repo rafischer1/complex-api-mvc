@@ -9,6 +9,20 @@ const getTagsForCostume = (req, res, next) => {
     })
 }
 
+const create = (req, res, next) => {
+  return model.create(req.body)
+    .catch(errors => {
+      return next({
+        status: 400,
+        message: `Could not create`,
+        errors: errors
+      })
+    })
+    .then(data => {
+      res.status(201).json(data)
+    })
+}
+
 const getAll = (req, res, next) => {
   return model.getAll()
     .then((costumes_tags) => {
@@ -16,4 +30,4 @@ const getAll = (req, res, next) => {
     })
 }
 
-module.exports = { getTagsForCostume , getAll }
+module.exports = { getTagsForCostume , create, getAll }
