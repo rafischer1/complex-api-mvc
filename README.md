@@ -14,7 +14,12 @@ Tags
 ID: (You Choose) A unique id that represents the tag. Created automatically.
 Name: (String) Name of the tag. Cannot be longer than 10 characters. Required.
 Color: (String) A color to be associated with the tag. Must be a valid hex color code (e.g. #123456). Optional.
-Tags will have different IDs even if they have the same name and color.
+
+//normal price: #33a7a0
+//sale 25% : #dfde61
+//2018 exclusive: #ae57de
+//bargain: "#4244d6"
+
 
 # Build RESTful routes so that you can:
 

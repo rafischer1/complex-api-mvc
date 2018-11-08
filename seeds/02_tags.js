@@ -3,39 +3,23 @@ exports.seed = (knex, Promise) => {
     .then(() => {
       return knex('tags').insert([{
             id: 1,
-            name: "Outdoors"
+            name: "25% off",
+            color: "#dfde61"
           },
           {
             id: 2,
-            name: "Indoors"
+            name: "2018 Exc",
+            color: "#ae57de"
           },
           {
             id: 3,
-            name: "21+"
+            name: "Default",
+            color: "#33a7a0"
           },
           {
             id: 4,
-            name: "Beer"
-          },
-          {
-            id: 5,
-            name: "Pizza"
-          },
-          {
-            id: 6,
-            name: "Recurring"
-          },
-          {
-            id: 7,
-            name: "Ice Cream"
-          },
-          {
-            id: 8,
-            name: "Flash Event"
-          },
-          {
-            id: 9,
-            name: "College/University"
+            name: "Bargain",
+            color: "#4244d6"
           },
         ])
         .then(() => {
