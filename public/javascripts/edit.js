@@ -1,5 +1,4 @@
-let editOpenBtn = document.getElementById('editOpenBtn')
-
-editOpenBtn.addEventListener('click', (e) => {
-  console.log(hi)
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('in the edit script')
+  let editBtn = document.querySelector('button.editOpenBtn')  
 })

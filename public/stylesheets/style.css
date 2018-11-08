@@ -107,7 +107,20 @@ footer {
   padding: 10px;  
 }
 
+.delBtn {
+  font-size: 10px;
+  height: 7%;
+  margin-left:  85%;
+  margin-bottom: 5px;
+}
+
+.delBtn:active {
+  height: 8%;
+  margin-left:  86%;
+}
+
 .editOpenBtn {
+  font-size: 10px;
   height: 8%;
   margin-left: 85%;
   margin-bottom: 5px;

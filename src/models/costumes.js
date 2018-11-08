@@ -27,4 +27,13 @@ const create = (body) => {
     .catch(err => Promise.reject(err))
 }
 
-module.exports = { getAll, create, getCostumeById }
+const deleteOne = (id) => {
+  return knex('costumes')
+  .where('id', id)
+  .del()
+  .returning('*')
+  .then(post => post[0])
+  .catch(err => Promise.reject(err))
+}
+
+module.exports = { getAll, create, getCostumeById, deleteOne }

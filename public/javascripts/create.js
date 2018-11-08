@@ -33,7 +33,15 @@ createSubmitBtn.addEventListener('submit', (e) => {
           .then((res) => {
             console.log('in the posts_tags route')
             return res
+            
           })
+          setTimeout(() => { 
+            alert("Costume Created"); 
+            setTimeout(() => { 
+              location.reload()   
+            }, 500);
+          }, 1000);
+          
       })
       .catch((err) => {
       console.log(err)
