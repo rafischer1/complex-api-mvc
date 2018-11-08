@@ -36,4 +36,33 @@ const deleteOne = (id) => {
   .catch(err => Promise.reject(err))
 }
 
-module.exports = { getAll, create, getCostumeById, deleteOne }
+const updateOne = (id, body) => {
+  console.log('int he model update:', body)
+  let newPost = {}
+  if (body.name) {
+    newPost.name = body.name
+  }
+  if (body.price) {
+    newPost.price = body.price
+  }
+  if (body.description) {
+    newPost.description = body.description
+  }
+  return knex('costumes')
+    .where('id', id)
+    .then(data => {
+      knex('costumes')
+        .where('id', id)
+        .limit(1)
+        .update(newPost)
+        .returning("*")
+        .then(data => {
+          res.json(data[0])
+        })
+    })
+    .catch(err => {
+      next(err)
+    })
+}
+
+module.exports = { getAll, create, getCostumeById, deleteOne, updateOne }

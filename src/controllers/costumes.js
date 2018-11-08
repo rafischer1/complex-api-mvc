@@ -9,7 +9,8 @@ const getAll = (req, res, next) => {
 }
 
 const getCostumeById = (req, res, next) => {
-  return model.getCostumesById(id)
+  let id = req.params.costume_id
+  return model.getCostumeById(id)
     .catch(error => {
       return next({
         status: 404,
@@ -37,6 +38,7 @@ const create = (req, res, next) => {
 }
 
 const updateOne = (req, res, next) => {
+  console.log(req.params.id)
   return model.updateOne(req.params.id, req.body)
     .then(data => {
       res.status(200).json(data)

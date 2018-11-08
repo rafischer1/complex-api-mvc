@@ -59,9 +59,7 @@
         <hr>
         <button data-toggle="modal"
           data-target="#modalCreate">Add Costume</button>
-        <button data-toggle="modal"
-          data-target="
-        #modalEdit">Add Tags</button>
+        <button data-toggle="modal">Add Tags</button>
       </div>
 
       <!-- create modal -->
@@ -123,50 +121,58 @@
           role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Edit title</h5>
+              <h5 class="modal-title"
+                id="editTitle">Edit title</h5>
 
               </button>
             </div>
             <div class="modal-body">
-              <form id="editSubmit">
+              <form id="editSubmitBtn">
                 <input type="text"
+                  id="editName"
                   class="createForm"
                   placeholder="Costume Name"
                   required>
                 <br>
                 <input type="number"
                   class="createForm"
+                  id="editPrice"
                   placeholder="Costume Price"
                   required><br>
                 <input type="textbox"
                   class="createForm"
+                  id="editDesc"
                   placeholder="Decription"
                   required>
+                <label for="tag-select">Edit tag:</label>
+                <select multiple
+                  id="editTag">
+                   <option value="1">25% off</option>
+                   <option value="2">2018 Exclusive</option>
+                   <option value="3">Lowest Price Guaranteed</option>
+                   <option value="4">RAF Bargains</option>
+                 </select>
                 <br>
-                <button type="button"
-                  class="btn btn-primary">Submit</button>
+                <button type="submit"
+                  class="btn btn-primary">Save Changes</button>
               </form>
-
             </div>
-            <div class="modal-footer">
-              <button type="button"
-                class="btn btn-primary">Save changes</button>
-              <button type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal">Close</button>
-            </div>
+            <button type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- footer -->
-      <footer>
-        <div class="alert alert-info"
-          role="alert">
-          A simple/complex API for g103 <a href="#h1"
-            class="alert-link">refresh this page</a>. Give it a click if you like!
-        </div>
-      </footer>
+    <!-- footer -->
+    <footer>
+      <div class="alert alert-info"
+        role="alert">
+        A simple/complex API for g103 <a href="#h1"
+          class="alert-link">refresh this page</a>. Give it a click if you like!
+      </div>
+    </footer>
 
     </div>
     </div>
@@ -174,7 +180,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="./javascripts/script.js"></script>
     <script src="./javascripts/create.js"></script>
-    <script src="./javascripts/edit.js"></script>
   </body>
 
 </html>
