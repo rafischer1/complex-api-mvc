@@ -31,7 +31,8 @@ createSubmitBtn.addEventListener('submit', (e) => {
 
         axios.post('/costumes_tags', newTagData)
           .then((res) => {
-            console.log('in the posts_tags route')
+            console.log('int eh tags', newTagData)
+            console.log('in the costumes_tags route')
             return res
             
           })
